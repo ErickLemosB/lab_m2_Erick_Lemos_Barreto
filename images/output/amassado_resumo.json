@@ -1,0 +1,34 @@
+{
+  "entrada": "images/output/amassado_hsv_mask.png",
+  "conectividade": 8,
+  "min_area": 1000,
+  "criterio_filtro": "mantém componentes com area >= min_area (pixels)",
+  "sequencia_morfologica": [
+    {
+      "operacao": "open",
+      "forma": "ellipse",
+      "tamanho": 5,
+      "iteracoes": 1
+    },
+    {
+      "operacao": "close",
+      "forma": "ellipse",
+      "tamanho": 5,
+      "iteracoes": 1
+    }
+  ],
+  "antes": {
+    "area_primeiro_plano": 77382,
+    "componentes_4": 53,
+    "componentes_8": 36,
+    "brutos": 36,
+    "filtrados": 6
+  },
+  "depois": {
+    "area_primeiro_plano": 76702,
+    "componentes_4": 8,
+    "componentes_8": 8,
+    "brutos": 8,
+    "filtrados": 5
+  }
+}
